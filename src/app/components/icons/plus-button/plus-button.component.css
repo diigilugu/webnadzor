@@ -1,0 +1,9 @@
+.plus-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 37px;
+  height: 37px;
+  background-color: #274a44;
+  border-radius: 50%;
+}
