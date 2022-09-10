@@ -1,0 +1,54 @@
+.title-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.section {
+  position: relative;
+  padding: 0px 70px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.why-us-title {
+  color: #274a44;
+  margin: 50px 0px 50px 0px;
+  font-size: 30px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.6;
+  text-transform: uppercase;
+  border-left: 4px solid #274a44;
+  padding: 10px 20px;
+}
+
+.about-items {
+  padding: 25px 30px;
+}
+
+.about-item {
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 34px 0 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.about-text {
+  color: #274a44;
+  margin-left: 30px;
+}
+
+.bgi-down {
+  background-image: url("/assets/images/dd3-min28.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

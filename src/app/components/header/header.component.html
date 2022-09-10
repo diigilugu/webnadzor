@@ -1,0 +1,29 @@
+<div class="fog" *ngIf="sidebar"></div>
+<header class="header">
+  <img class="header-image" src="../../../assets/images/dd3-min27.png" alt="">
+  <div class="header-wrapper">
+    <img class="header-logo" src="../../../assets/images/2022-08-0610.31.43.png" alt="">
+    <div class="header-phone">
+      <app-phone-icon [color]="'#41807c'"></app-phone-icon>
+      <a class="header-phone" href="tel: +7 (916) 677-15-51"> +7 (916) 677-15-51</a>
+    </div>
+    <div class="menu" (click)="openSidebar()">
+      <span class="menu-stick"></span>
+      <span class="menu-stick"></span>
+      <span class="menu-stick"></span>
+    </div>
+  </div>
+  <div class="sidebar" *ngIf="sidebar">
+    <div class="close-btn" (click)="closeSidebar()">
+      <span class="close-btn-pick right"></span>
+      <span class="close-btn-pick left"></span>
+    </div>
+    <ul class="sidebar-items">
+      <li class="sidebar-item">Главная</li>
+      <li class="sidebar-item">Сайт</li>
+      <li class="sidebar-item">Контакты</li>
+      <li class="sidebar-item">Открытые организации</li>
+      <li class="sidebar-item">Лицензирование</li>
+    </ul>
+  </div>
+</header>

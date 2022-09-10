@@ -1,0 +1,123 @@
+.header {
+  position: relative;
+}
+
+.header-image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.header-wrapper {
+  height: 350px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-logo {
+  width: calc(((100% - 1140px) / 2) + 490px);
+}
+
+.header-phone {
+  display: flex;
+  color: #41807c;
+  text-transform: uppercase;
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #274a44;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.menu > .menu-stick {
+  width: 40px;
+  height: 3px;
+  background-color: #41807c;
+  color: #41807c;
+  margin: 5px 0;
+}
+
+/*Sidebar*/
+.sidebar {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+}
+
+.sidebar-items {
+  color: white;
+  text-align: center;
+}
+
+.close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.close-btn-pick {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+}
+
+.close-btn-pick.right {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+.close-btn-pick.left {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transform: rotate(130deg);
+}
+
+.sidebar-item {
+  font-size: 20px;
+  padding: 8px 0px;
+}
+
+/*FOG*/
+.fog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}

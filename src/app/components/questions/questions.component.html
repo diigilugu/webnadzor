@@ -1,0 +1,16 @@
+<section class="section">
+  <div class="questions-title">
+    ЧАСТЫЕ ВОПРОСЫ
+  </div>
+  <ng-container *ngFor="let question of questions; let i = index">
+    <div class="question-box-wrapper">
+      <div class="question-box" (click)="openAnswer(i)">
+        <p class="question-text">{{question.question}}</p>
+        <app-plus-button></app-plus-button>
+      </div>
+      <div class="answer-box" *ngIf="question.isOpen">
+        {{question.answer}}
+      </div>
+    </div>
+  </ng-container>
+</section>

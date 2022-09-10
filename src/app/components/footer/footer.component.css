@@ -1,0 +1,29 @@
+.footer {
+  padding: 0px 30px;
+  border-top: 1px solid #c0c0c0;
+  color: #274a44;
+  background-image: url('/assets/images/dd3-min25121.png');
+  background-position: 100% 56%;
+}
+
+.footer-rules,
+.footer-end {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-end {
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+
+.footer-rules,
+.footer-year {
+  font-size: 30px;
+}
+
+.footer-politic-link {
+  font-size: 20px;
+}

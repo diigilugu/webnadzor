@@ -1,0 +1,51 @@
+.form-section {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.form-title {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif !important;
+  color: #274a44;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.form {
+  margin: 20px auto;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-input {
+  border: 1px solid #b3b3b3;
+  padding: 10px 12px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.form-textarea {
+  resize: none;
+}
+
+.form-input-checkbox {
+  margin-bottom: 10px;
+}
+
+.offero-link {
+  color: #274a44;
+  font-weight: bold;
+}
+
+.form-btn {
+  margin: 0 auto;
+  width: 155px;
+  color: #ffffff;
+  background-color: #274a44;
+  padding: 10px 30px;
+  outline: none;
+  border: none;
+}
