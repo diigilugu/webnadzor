@@ -18,6 +18,9 @@ import {RouterOutlet} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import { SitePageComponent } from './pages/site-page/site-page.component';
 import { TriangleComponent } from './components/icons/triangle/triangle.component';
+import { LicensePageComponent } from './pages/license-page/license-page.component';
+import { OrganizationPageComponent } from './pages/organization-page/organization-page.component';
+import { EgisPageComponent } from './pages/egis-page/egis-page.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { TriangleComponent } from './components/icons/triangle/triangle.componen
     FooterComponent,
     MainPageComponent,
     SitePageComponent,
-    TriangleComponent
+    TriangleComponent,
+    LicensePageComponent,
+    OrganizationPageComponent,
+    EgisPageComponent
   ],
   imports: [
     BrowserModule,

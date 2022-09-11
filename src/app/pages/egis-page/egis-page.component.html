@@ -1,0 +1,113 @@
+<div class="main-container">
+  <div class="container">
+    <img class="document-img" src="assets/images/pexels-erika-ortiz-120949461.jpg" alt="">
+    <div class="site-wrapper">
+      <div class="site-header">
+        <app-triangle></app-triangle>
+        <h2 class="site-title">ЕГИСЗ</h2>
+      </div>
+    </div>
+  </div>
+  <div class="info-block">
+    <ul class="info-items">
+      <li class="info-item">
+        <span class="green-circle"></span>
+        <div class="info-text">Согласно Постановлению Правительства РФ №852 от 01.06.2021 были введены новые требования к лицензированию медицинской деятельности</div>
+      </li>
+      <li class="info-item">
+        <span class="green-circle"></span>
+        <div class="info-text">Все медицинские организации должны разместить сведения о медицинской организации в ФРМО и сведения о медицинских работниках в ФРМР </div>
+      </li>
+      <li class="info-item">
+        <span class="green-circle"></span>
+        <div class="info-text">В случае невыполнения требований, изложенных в Постановлении, на медицинскую организацию распространяется административная ответственность в виде штрафа</div>
+      </li>
+    </ul>
+  </div>
+  <div class="">
+    <ul class="about-items">
+      <li class="about-item">
+        <app-green-point [star]="true"></app-green-point>
+        <p class="about-text">МЫ ЗАРЕГИСТРИРУЕМ ВАС В ЕГИСЗ В КРАТЧАЙШИЕ СРОКИ</p>
+      </li>
+      <li class="about-item">
+        <app-green-point [star]="true"></app-green-point>
+        <p class="about-text">СДЕЛАЕМ ПОЛНЫЙ АУДИТ ВАШЕЙ ДОКУМЕНТАЦИИ</p>
+      </li>
+      <li class="about-item">
+        <app-green-point [star]="true"></app-green-point>
+        <p class="about-text">ОБОРУДОВАНИЕ БУДЕТ ВНЕСЕНО ПО НОВЫМ СТАНДАРТАМ ОСНАЩЕНИЯ</p>
+      </li>
+    </ul>
+  </div>
+  <div class="prices">
+    <h1 class="prices-title">Рассчитать стоимость</h1>
+    <form class="prices-form">
+      <div class="form-group">
+        <label class="form-label" for="organization">Наименование организации</label>
+        <input class="form-input" id="organization" name="organization" type="text">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="isRegistration">Нужна ли регистрация?</label>
+        <select class="form-input" id="isRegistration" name="isRegistration">
+          <option value="">Да</option>
+          <option value="">Нет</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="personal">Количество сотрудников</label>
+        <select class="form-input" id="personal" name="personal">
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+          <option value="">От 5 до 10</option>
+          <option value="">От 10</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="equipment">Количество единиц оборудования</label>
+        <select class="form-input" id="equipment" name="equipment">
+          <option value="">До 10</option>
+          <option value="">От 10 до 20</option>
+          <option value="">От 20 до 30</option>
+          <option value="">От 30 до 40</option>
+          <option value="">От 40 до 50</option>
+          <option value="">От 50</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">Эл. почта</label>
+        <input class="form-input" id="email" name="email" type="email">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="phone">Телефон</label>
+        <input class="form-input" id="phone" name="phone" type="text">
+      </div>
+      <div class="form-input-checkbox">
+        <input type="checkbox" id="offero">
+        <label for="offero"> Я принимаю условия <a class="offero-link" href="">Политики конфиденциальности</a></label>
+      </div>
+      <button class="form-btn">ОТПРАВИТЬ</button>
+    </form>
+  </div>
+  <div class="video-container">
+    <div class="video-title">Наша авторская лекция на тему: ЕГИСЗ 2.0. ИНСТРУКЦИЯ К ПРИМЕНЕНИЮ</div>
+    <div class="video-wrapper">
+      <iframe class="video-iframe" src="https://www.youtube.com/embed/b7kFtRUmVI8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="info-container">
+    <h1 class="prices-title">СВЕЖАЯ ИНФОРМАЦИЯ О ЕГИCЗ!</h1>
+    <ul class="info-items">
+      <li class="info-item">
+        <span class="green-circle"></span>
+        <div class="info-text">С 22 августа 2022 года вышла новая версия ЕГИСЗ. ФРМО и ФРМР претерпели значительные изменения</div>
+      </li>
+      <li class="info-item">
+        <span class="green-circle"></span>
+        <div class="info-text">С 01 марта 2023 года вступают силы изменения в 323-ФЗ "Об основах охраны здоровья граждан", согласно которому ВСЕ фармацевтические органзации также должны быть зарегистрированы в ЕГИСЗ</div>
+      </li>
+    </ul>
+  </div>
+</div>
