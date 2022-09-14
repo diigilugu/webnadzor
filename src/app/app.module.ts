@@ -50,7 +50,7 @@ import { EducationPageComponent } from './pages/education-page/education-page.co
   imports: [
     BrowserModule,
     RouterOutlet,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
