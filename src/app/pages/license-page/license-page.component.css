@@ -118,3 +118,87 @@
   font-size: 24px;
   line-height: 1.2;
 }
+
+@media screen and (max-width: 730px) {
+  .main-container {
+    padding: 0px 20px;
+  }
+  .container {
+    margin-bottom: 200px;
+  }
+  .site-title {
+    font-size: 48px;
+    bottom: 21px;
+    right: -120px;
+  }
+  .site-header {
+    width: 100%;
+  }
+  .document-img {
+    width: 250px;
+    height: auto;
+  }
+  .prices-table {
+    flex-direction: column-reverse;
+  }
+  .price-logo-img {
+    margin: 20px 0px;
+  }
+  .video-wrapper {
+    width: 100%;
+  }
+  .info-block {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: 50% 50%;
+  }
+  .text-box {
+    font-size: 20px;
+  }
+  .text-secondary {
+    font-size: 16px;
+  }
+  .about-items {
+    padding: 0;
+  }
+  .about-text {
+    font-size: 20px;
+  }
+  .prices-text {
+    text-align: left;
+    font-size: 18px;
+  }
+  .prices-title {
+    font-size: 20px;
+  }
+  .info-text {
+    font-size: 18px;
+  }
+  .prices-item {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    margin-bottom: 200px;
+  }
+  .info-text {
+    font-size: 20px;
+  }
+  .about-items {
+    padding: 0;
+    margin-top: 100px;
+  }
+  .about-text {
+    font-size: 20px;
+  }
+  .prices-item {
+    font-size: 20px;
+  }
+  .site-title {
+    font-size: 30px;
+    bottom: 33px;
+    right: -47px;
+  }
+}

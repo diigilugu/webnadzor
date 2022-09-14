@@ -1,0 +1,5 @@
+@media screen and (max-width: 730px) {
+  svg {
+    width: 150px !important;
+  }
+}

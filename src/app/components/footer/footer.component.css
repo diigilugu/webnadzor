@@ -39,6 +39,7 @@
   .footer-name,
   .footer-politic-link,
   .footer-year {
+    text-align: center;
     margin: 10px 0;
   }
 }
