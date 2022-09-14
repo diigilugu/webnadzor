@@ -5,7 +5,7 @@
   <ng-container *ngFor="let question of questions; let i = index">
     <div class="question-box-wrapper">
       <div class="question-box" (click)="openAnswer(i)">
-        <p class="question-text">{{question.question}}</p>
+        <p animateOnScroll animationName="animate__animated animate__backInLeft animate__slow" class="question-text">{{question.question}}</p>
         <app-plus-button></app-plus-button>
       </div>
       <div class="answer-box" *ngIf="question.isOpen">
