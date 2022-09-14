@@ -27,3 +27,18 @@
 .footer-politic-link {
   font-size: 20px;
 }
+
+@media screen and (max-width: 755px) {
+  .footer {
+    padding: 0px 20px;
+  }
+  .footer-rules,
+  .footer-end {
+    flex-direction: column;
+  }
+  .footer-name,
+  .footer-politic-link,
+  .footer-year {
+    margin: 10px 0;
+  }
+}

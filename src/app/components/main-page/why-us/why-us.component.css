@@ -52,3 +52,24 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@media screen and (max-width: 750px) {
+  .about-gif {
+    display: none;
+  }
+  .about-items {
+    padding: 0;
+  }
+  .about-item {
+    margin: 0;
+  }
+  .section {
+    padding: 0px 20px;
+  }
+  .section-title {
+    font-size: 20px;
+  }
+  .about-text {
+    font-size: 16px;
+  }
+}

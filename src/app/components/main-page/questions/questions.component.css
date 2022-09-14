@@ -54,3 +54,27 @@
   font-family: 'Open Sans', sans-serif;
   color: #111111;
 }
+
+@media screen and (max-width: 750px) {
+  .about-gif {
+    display: none;
+  }
+  .about-items {
+    padding: 0;
+  }
+  .about-item {
+    margin: 0;
+  }
+  .section {
+    padding: 0px 20px;
+  }
+  .questions-title {
+    font-size: 30px;
+  }
+  .about-text {
+    font-size: 16px;
+  }
+  .question-box-wrapper {
+    padding: 25px 0px;
+  }
+}

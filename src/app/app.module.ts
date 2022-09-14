@@ -21,6 +21,8 @@ import { TriangleComponent } from './components/icons/triangle/triangle.componen
 import { LicensePageComponent } from './pages/license-page/license-page.component';
 import { OrganizationPageComponent } from './pages/organization-page/organization-page.component';
 import { EgisPageComponent } from './pages/egis-page/egis-page.component';
+import { SeePageComponent } from './pages/see-page/see-page.component';
+import { EducationPageComponent } from './pages/education-page/education-page.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { EgisPageComponent } from './pages/egis-page/egis-page.component';
     TriangleComponent,
     LicensePageComponent,
     OrganizationPageComponent,
-    EgisPageComponent
+    EgisPageComponent,
+    SeePageComponent,
+    EducationPageComponent
   ],
   imports: [
     BrowserModule,

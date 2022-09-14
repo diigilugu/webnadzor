@@ -13,7 +13,7 @@
       <span class="menu-stick"></span>
     </div>
   </div>
-  <div class="sidebar" *ngIf="sidebar">
+  <div class="sidebar" *ngIf="sidebar" #sidebarBlock>
     <div class="close-btn" (click)="closeSidebar()">
       <span class="close-btn-pick right"></span>
       <span class="close-btn-pick left"></span>
@@ -21,7 +21,9 @@
     <ul class="sidebar-items">
       <li class="sidebar-item"><a [routerLink]="'/'">Главная</a></li>
       <li class="sidebar-item"><a [routerLink]="'/site'" href="">Сайт</a></li>
-<!--      <li class="sidebar-item"><a [routerLink]="'/contacts'" href="">Контакты</a></li>-->
+      <li class="sidebar-item"><a [routerLink]="'/egisz'" href="">ЕГИСЗ</a></li>
+      <li class="sidebar-item"><a [routerLink]="'/see'" href="">Получение СЭЗ</a></li>
+      <li class="sidebar-item"><a [routerLink]="'/education'" href="">Обучение</a></li>
       <li class="sidebar-item"><a [routerLink]="'/organizations'" href="">Открытые организации</a></li>
       <li class="sidebar-item"><a [routerLink]="'/license'" href="">Лицензирование</a></li>
     </ul>

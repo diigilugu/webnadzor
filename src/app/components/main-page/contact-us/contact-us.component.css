@@ -1,6 +1,7 @@
 .form-section {
   text-align: center;
   margin-top: 60px;
+  padding: 0 20px;
 }
 
 .form-title {
@@ -48,4 +49,13 @@
   padding: 10px 30px;
   outline: none;
   border: none;
+}
+
+@media screen and (max-width: 530px) {
+  .form-title {
+    font-size: 30px;
+  }
+  .form {
+    width: 100%;
+  }
 }

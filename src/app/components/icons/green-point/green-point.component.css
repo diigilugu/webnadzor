@@ -22,3 +22,17 @@
   width: 28px;
   height: 28px;
 }
+
+@media screen and (max-width: 700px) {
+  .point {
+    width: 30px;
+    height: 30px;
+  }
+  .point-inner {
+    width: 14px;
+    height: 14px;
+  }
+  .point-star {
+    width: 14px;
+  }
+}
