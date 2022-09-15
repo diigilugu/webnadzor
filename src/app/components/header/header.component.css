@@ -59,7 +59,6 @@
   background-color: black;
   position: absolute;
   top: 0;
-  width: 250px;
   height: 100vh;
 }
 
@@ -122,6 +121,29 @@
   z-index: 2;
 }
 
+.up-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 50;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #274a44;
+  cursor: pointer;
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid white;
+}
+
 @media screen and (max-width: 700px) {
   .header-wrapper {
     display: flex;
@@ -132,5 +154,9 @@
   }
   .menu {
     margin: 50px 0px;
+  }
+  .up-btn {
+    bottom: 10px;
+    right: 10px;
   }
 }

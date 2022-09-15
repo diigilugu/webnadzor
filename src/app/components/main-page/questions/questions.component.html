@@ -8,7 +8,7 @@
         <p animateOnScroll animationName="animate__animated animate__backInLeft animate__slow" class="question-text">{{question.question}}</p>
         <app-plus-button></app-plus-button>
       </div>
-      <div class="answer-box" *ngIf="question.isOpen">
+      <div animateOnScroll animationName="animate__animated animate__fadeIn animate__slow" class="answer-box" *ngIf="question.isOpen">
         {{question.answer}}
       </div>
     </div>

@@ -25,6 +25,7 @@ import {SeePageComponent} from './pages/see-page/see-page.component';
 import {EducationPageComponent} from './pages/education-page/education-page.component';
 import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     AppRoutingModule,
     AnimateOnScrollModule.forRoot(),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

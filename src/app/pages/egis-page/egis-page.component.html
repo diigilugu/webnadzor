@@ -42,54 +42,73 @@
   </div>
   <div class="prices">
     <h1 class="prices-title">Рассчитать стоимость</h1>
-    <form class="prices-form">
+    <form [formGroup]="egisForm" (ngSubmit)="calculate()" class="prices-form">
       <div class="form-group">
         <label class="form-label" for="organization">Наименование организации</label>
-        <input class="form-input" id="organization" name="organization" type="text">
+        <input formControlName="organization" class="form-input" id="organization" name="organization" type="text">
+      </div>
+      <div *ngIf="egisForm.controls['organization'].invalid && (egisForm.controls['organization'].dirty || egisForm.controls['organization'].touched)"
+           class="alert">
+        <div *ngIf="egisForm.controls['organization'].errors?.['required']">
+          Введите название организации
+        </div>
       </div>
       <div class="form-group">
         <label class="form-label" for="isRegistration">Нужна ли регистрация?</label>
-        <select class="form-input" id="isRegistration" name="isRegistration">
-          <option value="">Да</option>
-          <option value="">Нет</option>
+        <select formControlName="isRegistration" class="form-input" id="isRegistration" name="isRegistration">
+          <option value="5000">Да</option>
+          <option value="0">Нет</option>
         </select>
       </div>
       <div class="form-group">
         <label class="form-label" for="personal">Количество сотрудников</label>
-        <select class="form-input" id="personal" name="personal">
-          <option value="">1</option>
-          <option value="">2</option>
-          <option value="">3</option>
-          <option value="">4</option>
-          <option value="">От 5 до 10</option>
-          <option value="">От 10</option>
+        <select formControlName="personal"  class="form-input" id="personal" name="personal">
+          <option selected value="1500">1</option>
+          <option value="2100">2</option>
+          <option value="2600">3</option>
+          <option value="2900">4</option>
+          <option value="3500">От 5 до 10</option>
+          <option value="6500">От 10</option>
         </select>
       </div>
       <div class="form-group">
         <label class="form-label" for="equipment">Количество единиц оборудования</label>
-        <select class="form-input" id="equipment" name="equipment">
-          <option value="">До 10</option>
-          <option value="">От 10 до 20</option>
-          <option value="">От 20 до 30</option>
-          <option value="">От 30 до 40</option>
-          <option value="">От 40 до 50</option>
-          <option value="">От 50</option>
+        <select formControlName="equipment"  class="form-input" id="equipment" name="equipment">
+          <option selected value="5000">До 10</option>
+          <option value="7000">От 10 до 20</option>
+          <option value="10000">От 20 до 30</option>
+          <option value="11000">От 30 до 40</option>
+          <option value="12000">От 40 до 50</option>
+          <option value="24000">От 50</option>
         </select>
       </div>
       <div class="form-group">
         <label class="form-label" for="email">Эл. почта</label>
-        <input class="form-input" id="email" name="email" type="email">
+        <input formControlName="email" class="form-input" id="email" name="email" type="email">
+      </div>
+      <div *ngIf="egisForm.controls['email'].invalid && (egisForm.controls['email'].dirty || egisForm.controls['email'].touched)"
+           class="alert">
+        <div *ngIf="egisForm.controls['email'].errors?.['email'] || egisForm.controls['email'].errors?.['required']">
+          Введите корректный адрес электронной почты
+        </div>
       </div>
       <div class="form-group">
         <label class="form-label" for="phone">Телефон</label>
-        <input class="form-input" id="phone" name="phone" type="text">
+        <input formControlName="phone" class="form-input" id="phone" name="phone" type="text">
+      </div>
+      <div *ngIf="egisForm.controls['phone'].invalid && (egisForm.controls['phone'].dirty || egisForm.controls['phone'].touched)"
+           class="alert">
+        <div *ngIf="egisForm.controls['phone'].errors?.['required']">
+          Введите номер телефона
+        </div>
       </div>
       <div class="form-input-checkbox">
-        <input type="checkbox" id="offero">
+        <input formControlName="policy" type="checkbox" id="offero">
         <label for="offero"> Я принимаю условия <a class="offero-link" href="">Политики конфиденциальности</a></label>
       </div>
-      <button class="form-btn">ОТПРАВИТЬ</button>
+      <button [class.disabled]="egisForm.invalid" class="form-btn">ОТПРАВИТЬ</button>
     </form>
+    <div *ngIf="price !== 0" class="price">Цена составляет: {{price}}</div>
   </div>
   <div class="video-container">
     <div class="video-title">Наша авторская лекция на тему: ЕГИСЗ 2.0. ИНСТРУКЦИЯ К ПРИМЕНЕНИЮ</div>

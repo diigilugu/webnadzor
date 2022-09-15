@@ -26,7 +26,7 @@
     <div *ngIf="contactForm.controls['userEmail'].invalid && (contactForm.controls['userEmail'].dirty || contactForm.controls['userEmail'].touched)"
          class="alert">
       <div *ngIf="contactForm.controls['userEmail'].errors?.['email'] || contactForm.controls['userEmail'].errors?.['required']">
-        Введите корректную электронную почту
+        Введите корректный адрес электронной почты
       </div>
     </div>
     <textarea formControlName="userMassage" placeholder="Ваше сообщение" class="form-input form-textarea" rows="6"></textarea>

@@ -1,11 +1,11 @@
 <div class="fog" *ngIf="sidebar"></div>
-<header class="header">
+<header #top class="header">
   <img class="header-image" src="../../../assets/images/dd3-min27.png" alt="">
   <div class="header-wrapper">
     <img class="header-logo" src="../../../assets/images/2022-08-0610.31.43.png" alt="">
     <div class="header-phone">
       <app-phone-icon [color]="'#41807c'"></app-phone-icon>
-      <a class="header-phone" href="tel: +7 (916) 677-15-51"> +7 (916) 677-15-51</a>
+      <a class="header-phone" [attr.href]="mobileWidth > 700 ? '#' : 'tel: +7 (916) 677-15-51'"> +7 (916) 677-15-51</a>
     </div>
     <div class="menu" (click)="openSidebar()">
       <span class="menu-stick"></span>
@@ -13,7 +13,7 @@
       <span class="menu-stick"></span>
     </div>
   </div>
-  <div class="sidebar" *ngIf="sidebar" #sidebarBlock>
+  <div [@widthGrow]="state" class="sidebar" *ngIf="sidebar" #sidebarBlock>
     <div class="close-btn" (click)="closeSidebar()">
       <span class="close-btn-pick right"></span>
       <span class="close-btn-pick left"></span>
@@ -27,5 +27,8 @@
       <li class="sidebar-item"><a [routerLink]="'/organizations'" href="">Открытые организации</a></li>
       <li class="sidebar-item"><a [routerLink]="'/license'" href="">Лицензирование</a></li>
     </ul>
+  </div>
+  <div class="up-btn" (click)="scrollToTop()">
+    <div class="arrow-up"></div>
   </div>
 </header>
