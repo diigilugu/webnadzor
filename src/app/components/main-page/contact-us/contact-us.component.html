@@ -1,21 +1,48 @@
 <section class="form-section">
   <h2 class="form-title">ОСТАВИТЬ ЗАЯВКУ</h2>
-  <form animateOnScroll animationName="animate__animated animate__backInUp" class="form" action="">
-    <select class="form-input">
-      <option class="form-option" value="" selected>Регистрация в ЕГИСЗ</option>
-      <option class="form-option" value="">Разработка сайта</option>
-      <option class="form-option" value="">Аудиторская проверка</option>
-      <option class="form-option" value="">Аккредитация врачей</option>
-      <option class="form-option" value="">Открытие бизнеса</option>
-      <option class="form-option" value="">Получение лицензии/СЭЗ</option>
+  <form
+    animateOnScroll
+    animationName="animate__animated animate__backInDown"
+    class="form"
+    [formGroup]="contactForm"
+    (ngSubmit)="sendFormData()"
+  >
+    <select formControlName="userQuestion" class="form-input">
+      <option class="form-option" value="Регистрация в ЕГИСЗ" [selected]="true">Регистрация в ЕГИСЗ</option>
+      <option class="form-option" value="Разработка сайта">Разработка сайта</option>
+      <option class="form-option" value="Аудиторская проверка">Аудиторская проверка</option>
+      <option class="form-option" value="Аккредитация врачей">Аккредитация врачей</option>
+      <option class="form-option" value="Открытие бизнеса">Открытие бизнеса</option>
+      <option class="form-option" value="Получение лицензии/СЭЗ">Получение лицензии/СЭЗ</option>
     </select>
-    <input class="form-input" placeholder="Название организации" type="text">
-    <input class="form-input" placeholder="Электронная почта" type="email">
-    <textarea placeholder="Ваше сообщение" class="form-input form-textarea" rows="6"></textarea>
-    <div class="form-input-checkbox">
-      <input type="checkbox" id="offero">
-      <label for="offero"> Я принимаю условия <a class="offero-link" href="">Политики конфиденциальности</a></label>
+    <input formControlName="organizationName" class="form-input" placeholder="Название организации" type="text">
+    <div *ngIf="contactForm.controls['organizationName'].invalid && (contactForm.controls['organizationName'].dirty || contactForm.controls['organizationName'].touched)"
+         class="alert">
+      <div *ngIf="contactForm.controls['organizationName'].errors?.['required']">
+        Введите название организации
+      </div>
     </div>
-    <button class="form-btn">ОТПРАВИТЬ</button>
+    <input formControlName="userEmail" class="form-input" placeholder="Электронная почта" type="email">
+    <div *ngIf="contactForm.controls['userEmail'].invalid && (contactForm.controls['userEmail'].dirty || contactForm.controls['userEmail'].touched)"
+         class="alert">
+      <div *ngIf="contactForm.controls['userEmail'].errors?.['email'] || contactForm.controls['userEmail'].errors?.['required']">
+        Введите корректную электронную почту
+      </div>
+    </div>
+    <textarea formControlName="userMassage" placeholder="Ваше сообщение" class="form-input form-textarea" rows="6"></textarea>
+    <div *ngIf="contactForm.controls['userMassage'].invalid && (contactForm.controls['userMassage'].dirty || contactForm.controls['userMassage'].touched)"
+         class="alert">
+      <div *ngIf="contactForm.controls['userMassage'].errors?.['required']">
+        Введите Ваше сообщение
+      </div>
+    </div>
+    <div class="form-input-checkbox">
+      <input formControlName="policy"
+             type="checkbox" id="offero">
+      <label
+        [ngStyle]="contactForm.controls['policy'].invalid ? {'color': '#d34040'} : {'red': '#d34040'}" for="offero">
+        Я принимаю условия <a [ngStyle]="contactForm.controls['policy'].invalid ? {'color': '#d34040'} : {'red': '#d34040'}" class="offero-link" href="">Политики конфиденциальности</a></label>
+    </div>
+    <button [class.disabled]="contactForm.invalid" class="form-btn">ОТПРАВИТЬ</button>
   </form>
 </section>

@@ -24,6 +24,7 @@ import {EgisPageComponent} from './pages/egis-page/egis-page.component';
 import {SeePageComponent} from './pages/see-page/see-page.component';
 import {EducationPageComponent} from './pages/education-page/education-page.component';
 import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -52,7 +53,9 @@ import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
     BrowserModule,
     RouterOutlet,
     AppRoutingModule,
-    AnimateOnScrollModule.forRoot()
+    AnimateOnScrollModule.forRoot(),
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

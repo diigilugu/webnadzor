@@ -51,6 +51,16 @@
   border: none;
 }
 
+.disabled {
+  background-color: rgba(39, 74, 68, 0.60);
+}
+
+.alert {
+  color: #d34040;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
 @media screen and (max-width: 530px) {
   .form-title {
     font-size: 30px;
